@@ -1,0 +1,5214 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/installation-and-configuration/installation/step-by-step-guide/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../build-sources/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Step by step guide - TheHive Project Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-by-step-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+             
+This documentation site is deprecated. Please visit <a href=https://docs.strangebee.com><b>https://docs.strangebee.com</b></a> for <a href=https://docs.strangebee.com/thehive/setup/><b>TheHive 5</b></a> and <a href=https://docs.strangebee.com/cortex><b>Cortex</b></a> documentation ! 
+ 
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="TheHive Project Documentation" class="md-header__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
+      
+  <img src="../../../../images/thehive.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TheHive Project Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Step by step guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  TheHive 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://docs.strangebee.com/thehive/setup/" class="md-tabs__link">
+        
+  
+    
+  
+  TheHive 5
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="TheHive Project Documentation" class="md-nav__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
+      
+  <img src="../../../../images/thehive.png" alt="logo">
+
+    </a>
+    TheHive Project Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    TheHive 4
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            TheHive 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation and configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Step by step guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Step by step guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#java-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java Virtual Machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cassandra-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cassandra database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cassandra database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-from-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install from repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add nodes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexing-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexing engine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      File storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thehive" class="md-nav__link">
+    <span class="md-ellipsis">
+      TheHive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TheHive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stable-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stable versions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beta-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beta versions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secret-key-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secret key configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filesystem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced configuration
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-sources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build sources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/secret/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secret key
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/ssl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/proxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database & indexes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/file-storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/akka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/connectors-cortex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cortex connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/connectors-misp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MISP connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/manage-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/3_nodes_cluster/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use TheHive as a cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../user-guides/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    User guides
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            User guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/quick-start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick start with TheHive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Administrators
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Administrators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administrators/analyzer-templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage analyzer template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administrators/custom-fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage custom fields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administrators/observable-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage observable types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administrators/organisations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organisations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administrators/plateform-status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plateform status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administrators/profiles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Profiles management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administrators/tactics-techniques-procedures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tactics, Techniques & Procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administrators/tags-and-taxonomies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taxonomies and Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Organisation managers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Organisation managers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/organisation-managers/case-templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/organisation-managers/custom-tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/organisation-managers/organisations-users-sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organisations, Users and sharing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/organisation-managers/ui-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/organisation-managers/users-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analysts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Analysts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/create-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/create-case/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/create-tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Case Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/create-observables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Case Observables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/ttps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tactics, Techniques and Procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/run-responders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run Responders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/run-analyzers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run Analyzers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing Cases, Tasks and Observables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/close-case/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Close Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/export-case/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Cases to MISP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/analysts/user-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User settings configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Operations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Howto update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migration from TheHive 3.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/backup-restore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backup & restore
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/https/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure HTTPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/fail2ban/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use fail2ban
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/cassandra-security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cassandra & security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    APIs
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            APIs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/organisation/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Organisation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Organisation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/organisation/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/organisation/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/organisation/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List/Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/organisation/list-links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/user/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    User
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            User
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/set-password/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set password
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/generate-api-key/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate API key
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/revoke-api-key/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revoke API key
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/get-api-key/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get API key
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/lock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lock / Unlock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/custom-field/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Custom field
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_4" id="__nav_2_5_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Custom field
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/custom-field/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/custom-field/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/custom-field/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/custom-field/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/custom-field/get/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/custom-field/getUse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use count
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/case-template/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Case template
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_5" id="__nav_2_5_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Case template
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case-template/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get / List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case-template/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case-template/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case-template/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/alert/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Alert
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_6" id="__nav_2_5_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Alert
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List / Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/read/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mark as Read/Unread
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/promote-as-case/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Promote
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/merge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/similar-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List similar Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/list-observables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List Observables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/add-observable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add observables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/update-observable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update observable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/delete-observable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add observables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/run-responder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run Responder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/list-responder-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List responder actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/case/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Case
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_7" id="__nav_2_5_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            Case
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/merge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/export/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Case to MISP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/related-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List related Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/related-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List related Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/attachments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List related Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/run-responder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run responder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/responder-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List responder actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/task/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Task
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_8" id="__nav_2_5_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            Task
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/get/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get case task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List case tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/run-responder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run responder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/responder-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List responder jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/create-log/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add log
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/delete-log/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete log
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/log-run-responder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run responder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/log-responder-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List responder jobs on log
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List task logs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/waiting-tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List waiting tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api/observable/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Observable
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_9" id="__nav_2_5_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            Observable
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/observable/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/observable/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/observable/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/observable/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List / Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/observable/analyzer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analyzer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/observable/responder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Responder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.strangebee.com/thehive/setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TheHive 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#java-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java Virtual Machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cassandra-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cassandra database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cassandra database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-from-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install from repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add nodes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexing-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexing engine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      File storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thehive" class="md-nav__link">
+    <span class="md-ellipsis">
+      TheHive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TheHive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stable-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stable versions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beta-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beta versions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secret-key-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secret key configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filesystem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced configuration
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="step-by-step-guide">Step-by-Step guide<a class="headerlink" href="#step-by-step-guide" title="Permanent link">#</a></h1>
+<p>This page is a step by step installation and configuration guide to get an TheHive 4 instance up and running. This guide is illustrated with examples for Debian and RPM packages based systems and for installation from binary packages.</p>
+<h2 id="java-virtual-machine">Java Virtual Machine<a class="headerlink" href="#java-virtual-machine" title="Permanent link">#</a></h2>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Debian</label><label for="__tabbed_1_2">RPM</label><label for="__tabbed_1_3">Other</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>openjdk-8-jre-headless
+<span class="nb">echo</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">&quot;/usr/lib/jvm/java-8-openjdk-amd64&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/environment
+<span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">&quot;/usr/lib/jvm/java-8-openjdk-amd64&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>java-1.8.0-openjdk-headless.x86_64
+<span class="nb">echo</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">&quot;/usr/lib/jvm/jre-1.8.0&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/environment
+<span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">&quot;/usr/lib/jvm/jre-1.8.0&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>The installation requires Java 8, so refer to your system documentation to install it.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>TheHive can be loaded by Java 11, but not the stable version of Cassandra, which still requires Java 8. 
+If you set up a cluster for the database distinct from TheHive servers:</p>
+<ul>
+<li>Cassandra nodes can be loaded by Java 8</li>
+<li>TheHive nodes can be loaded by Java 11 </li>
+</ul>
+<p>For standalone servers, with TheHive and Cassandra on the same OS, we recommend having only Java 8 installed for both applications.</p>
+</div>
+<h2 id="cassandra-database">Cassandra database<a class="headerlink" href="#cassandra-database" title="Permanent link">#</a></h2>
+<p>Apache Cassandra is a scalable and high available database. TheHive supports the latest stable version  <strong>3.11.x</strong> of Cassandra.</p>
+<h3 id="install-from-repository">Install from repository<a class="headerlink" href="#install-from-repository" title="Permanent link">#</a></h3>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Debian</label><label for="__tabbed_2_2">RPM</label><label for="__tabbed_2_3">Other</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Add Apache repository references</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://www.apache.org/dist/cassandra/KEYS<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb http://www.apache.org/dist/cassandra/debian 311x main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/apt/sources.list.d/cassandra.sources.list
+</code></pre></div>
+</li>
+<li>
+<p>Install the package</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>cassandra
+</code></pre></div>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Add the Apache repository of Cassandra to <code>/etc/yum.repos.d/cassandra.repo</code></p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>cassandra<span class="o">]</span>
+<span class="nv">name</span><span class="o">=</span>Apache<span class="w"> </span>Cassandra
+<span class="nv">baseurl</span><span class="o">=</span>https://downloads.apache.org/cassandra/redhat/311x/
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">repo_gpgcheck</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">gpgkey</span><span class="o">=</span>https://downloads.apache.org/cassandra/KEYS
+</code></pre></div>
+</li>
+<li>
+<p>Install the package</p>
+<div class="highlight"><pre><span></span><code>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>cassandra
+</code></pre></div>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Download and untgz archive from http://cassandra.apache.org/download/ in the folder of your choice.</p>
+</div>
+</div>
+</div>
+</div>
+<p>By default, data is stored in <code>/var/lib/cassandra</code>.</p>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h3>
+<p>Start by changing the <code>cluster_name</code> with <code>thp</code>. Run the command <code>cqlsh</code>: </p>
+<div class="highlight"><pre><span></span><code>cqlsh<span class="w"> </span>localhost<span class="w"> </span><span class="m">9042</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">cqlsh</span><span class="o">&gt;</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">system</span><span class="p">.</span><span class="k">local</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">cluster_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;thp&#39;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">key</span><span class="o">=</span><span class="s1">&#39;local&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>Exit and then run:</p>
+<div class="highlight"><pre><span></span><code>nodetool<span class="w"> </span>flush
+</code></pre></div>
+<p>Configure Cassandra by editing <code>/etc/cassandra/cassandra.yaml</code> file.</p>
+<div class="highlight"><pre><span></span><code># content from /etc/cassandra/cassandra.yaml
+
+cluster_name: &#39;thp&#39;
+listen_address: &#39;xx.xx.xx.xx&#39; # address for nodes
+rpc_address: &#39;xx.xx.xx.xx&#39; # address for clients
+seed_provider:
+    - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+      parameters:
+          # Ex: &quot;&lt;ip1&gt;,&lt;ip2&gt;,&lt;ip3&gt;&quot;
+          - seeds: &#39;xx.xx.xx.xx&#39; # self for the first node
+data_file_directories:
+  - &#39;/var/lib/cassandra/data&#39;
+commitlog_directory: &#39;/var/lib/cassandra/commitlog&#39;
+saved_caches_directory: &#39;/var/lib/cassandra/saved_caches&#39;
+hints_directory: 
+  - &#39;/var/lib/cassandra/hints&#39;
+</code></pre></div>
+<p>Then restart the service:</p>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Debian</label><label for="__tabbed_3_2">RPM</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>service<span class="w"> </span>cassandra<span class="w"> </span>restart
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Run the service and ensure it restart after a reboot:</p>
+<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>daemon-reload
+service<span class="w"> </span>cassandra<span class="w"> </span>start
+chkconfig<span class="w"> </span>cassandra<span class="w"> </span>on
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Cassandra service does not start well with the new systemd version. There is an existing issue and a fix on Apache website: <a href="">https://issues.apache.org/jira/browse/CASSANDRA-15273</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>By default Cassandra listens on <code>7000/tcp</code> (inter-node), <code>9042/tcp</code> (client).</p>
+<h4 id="additional-configuration">Additional configuration<a class="headerlink" href="#additional-configuration" title="Permanent link">#</a></h4>
+<p>For additional configuration options, refer to:</p>
+<ul>
+<li><a href="https://cassandra.apache.org/doc/latest/getting_started/configuring.html">Cassandra documentation page</a></li>
+<li><a href="https://docs.datastax.com/en/ddac/doc/datastax_enterprise/config/configTOC.html">Datastax documentation page</a></li>
+</ul>
+<h4 id="security">Security<a class="headerlink" href="#security" title="Permanent link">#</a></h4>
+<p>To add security measures in Cassandra , refer the the <a href="../../../operations/cassandra-security/">related administration guide</a>.</p>
+<h4 id="add-nodes">Add nodes<a class="headerlink" href="#add-nodes" title="Permanent link">#</a></h4>
+<p>To add Cassandra nodes, refer the the <a href="../../architecture/3_nodes_cluster/">related administration guide</a>.</p>
+<h2 id="indexing-engine">Indexing engine<a class="headerlink" href="#indexing-engine" title="Permanent link">#</a></h2>
+<p>Starting from TheHive 4.1.0, a solution to store data indexes is required. These indexes should be unique and the same for all nodes of TheHive cluster. </p>
+<ul>
+<li>TheHive embed a Lucene engine you can use for standalone server</li>
+<li>For clusters setups, an instance of Elasticsearch is required </li>
+</ul>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Local lucene engine</label><label for="__tabbed_4_2">Elasticsearch</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Create a folder dedicated to host indexes for TheHive: </p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>/opt/thp/thehive/index
+chown<span class="w"> </span>thehive:thehive<span class="w"> </span>-R<span class="w"> </span>/opt/thp/thehive/index
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Use an existing Elasticsearch instance or install a new one. This instance should be reachable by all nodes of a cluster.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Elasticsearch configuration should use the default value for <code>script.allowed_types</code>, or contain the following configuration line: </p>
+<div class="highlight"><pre><span></span><code><span class="nt">script.allowed_types</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inline,stored</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Indexes will be created at the first start of TheHive. It can take a certain amount of time, depending the size of the database</li>
+<li>Like data and files, indexes should be part of the backup policy</li>
+<li>Indexes can removed and created again</li>
+</ul>
+</div>
+<h2 id="file-storage">File storage<a class="headerlink" href="#file-storage" title="Permanent link">#</a></h2>
+<p>Files uploaded in TheHive (in <em>task logs</em> or in <em>observables</em>) can be stores in localsystem, in a Hadoop filesystem (recommended) or in the graph database.</p>
+<p>For standalone production and test servers , we recommends using local filesystem. If you think about building a cluster with TheHive, you have several possible solutions: using Hadoop or S3 services ; see the <a href="../../architecture/3_nodes_cluster/">related guide</a> for more details and an example with MinIO servers.  </p>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Local Filesystem</label><label for="__tabbed_5_2">S3 with Min.io</label><label for="__tabbed_5_3">HDFS with Hadoop</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option is perfect <strong>for standalone servers</strong>. If you intend to build a cluster for your instance of TheHive 4 we recommend:</p>
+<ul>
+<li>using a NFS share, common to all nodes</li>
+<li>having a look at storage solutions implementing S3 or HDFS.</li>
+</ul>
+</div>
+<p>To store files on the local filesystem, start by choosing the dedicated folder:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/thp/thehive/files
+</code></pre></div>
+<p>This path will be used in the configuration of TheHive.</p>
+<p>Later, after having installed TheHive, ensure the user <code>thehive</code> owns the path chosen for storing files:</p>
+<div class="highlight"><pre><span></span><code>chown -R thehive:thehive /opt/thp/thehive/files
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>An example of installing, configuring and use Min.IO is detailed in <a href="../../architecture/3_nodes_cluster/">this documentation</a>.</p>
+</div>
+<div class="tabbed-block">
+<p>An example of installing, configuring and use Apache Hadoop is detailed in <a href="../hadoop/">this documentation</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="thehive">TheHive<a class="headerlink" href="#thehive" title="Permanent link">#</a></h2>
+<p>This part contains instructions to install TheHive and then configure it.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>TheHive4 can't be installed on the same server than older versions. We recommend installing it on a new server, especially if a migration is foreseen.</p>
+</div>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h3>
+<p>All packages are published on our packages repository. We support Debian and RPM packages as well as binary packages (zip archive). All packages are signed using our GPG key <a href="https://raw.githubusercontent.com/TheHive-Project/TheHive/master/PGP-PUBLIC-KEY">562CBC1C</a>. Its fingerprint is <code>0CD5 AC59 DE5C 5A8E 0EE1  3849 3D99 BB18 562C BC1C</code>.</p>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Debian</label><label for="__tabbed_6_2">RPM</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://raw.githubusercontent.com/TheHive-Project/TheHive/master/PGP-PUBLIC-KEY<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>rpm<span class="w"> </span>--import<span class="w"> </span>https://raw.githubusercontent.com/TheHive-Project/TheHive/master/PGP-PUBLIC-KEY
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>We also release stable and beta version of the applications.</p>
+<h4 id="stable-versions">Stable versions<a class="headerlink" href="#stable-versions" title="Permanent link">#</a></h4>
+<p>Install TheHive 4.x package of the stable version by using the following commands:</p>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Debian</label><label for="__tabbed_7_2">RPM</label><label for="__tabbed_7_3">Other</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;deb https://deb.thehive-project.org release main&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/apt/sources.list.d/thehive-project.list
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>thehive4
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Setup your system to connect the RPM repository. Create and edit the file <code>/etc/yum.repos.d/thehive-project.repo</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>thehive-project<span class="o">]</span>
+<span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">priority</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">name</span><span class="o">=</span>TheHive-Project<span class="w"> </span>RPM<span class="w"> </span>repository
+<span class="nv">baseurl</span><span class="o">=</span>https://rpm.thehive-project.org/release/noarch
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+</li>
+<li>
+<p>Then install the package using <code>yum</code>:</p>
+<div class="highlight"><pre><span></span><code>yum<span class="w"> </span>install<span class="w"> </span>thehive4
+</code></pre></div>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Download and unzip the chosen binary package. TheHive files can be installed wherever you want on the filesystem. In this guide, we assume you have chosen to install them under <code>/opt</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt
+wget<span class="w"> </span>https://download.thehive-project.org/thehive4-latest.zip
+unzip<span class="w"> </span>thehive4-latest.zip
+ln<span class="w"> </span>-s<span class="w"> </span>thehive4-x.x.x<span class="w"> </span>thehive
+</code></pre></div>
+<ol>
+<li>
+<p>Prepare the system</p>
+<p>It is recommended to use a dedicated, non-privileged user account to start TheHive. If so, make sure that the chosen account can create log files in <code>/opt/thehive/logs</code>.</p>
+<p>If you'd rather start the application as a service, use the following commands:</p>
+<div class="highlight"><pre><span></span><code>addgroup<span class="w"> </span>thehive
+adduser<span class="w"> </span>--system<span class="w"> </span>thehive
+chown<span class="w"> </span>-R<span class="w"> </span>thehive:thehive<span class="w"> </span>/opt/thehive
+mkdir<span class="w"> </span>/etc/thehive
+touch<span class="w"> </span>/etc/thehive/application.conf
+chown<span class="w"> </span>root:thehive<span class="w"> </span>/etc/thehive
+chgrp<span class="w"> </span>thehive<span class="w"> </span>/etc/thehive/application.conf
+chmod<span class="w"> </span><span class="m">640</span><span class="w"> </span>/etc/thehive/application.conf
+</code></pre></div>
+<p>Copy the systemd script in <code>/etc/systemd/system/thehive.service</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/tmp
+wget<span class="w"> </span>https://github.com/TheHive-Project/TheHive/blob/master/package/thehive.service
+cp<span class="w"> </span>thehive.service<span class="w"> </span>/etc/systemd/system/thehive.service
+</code></pre></div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<h4 id="beta-versions">Beta versions<a class="headerlink" href="#beta-versions" title="Permanent link">#</a></h4>
+<p>To install beta versions of TheHive4, use the following setup:</p>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Debian</label><label for="__tabbed_8_2">RPM</label><label for="__tabbed_8_3">Other</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;deb https://deb.thehive-project.org beta main&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/apt/sources.list.d/thehive-project.list
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>thehive4
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>setup your system to connect the RPM repository. Create and edit the file <code>/etc/yum.repos.d/thehive-project.repo</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>thehive-project<span class="o">]</span>
+<span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">priority</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">name</span><span class="o">=</span>TheHive-Project<span class="w"> </span>RPM<span class="w"> </span>repository
+<span class="nv">baseurl</span><span class="o">=</span>https://rpm.thehive-project.org/beta/noarch
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+</li>
+<li>
+<p>Then install the package using <code>yum</code>:</p>
+<div class="highlight"><pre><span></span><code>yum<span class="w"> </span>install<span class="w"> </span>thehive4
+</code></pre></div>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Download and unzip the chosen binary package. TheHive files can be installed wherever you want on the filesystem. In this guide, we assume you have chosen to install them under <code>/opt</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt
+wget<span class="w"> </span>https://download.thehive-project.org/thehive4-beta-latest.zip
+unzip<span class="w"> </span>thehive4-beta-latest.zip
+ln<span class="w"> </span>-s<span class="w"> </span>thehive4-x.x.x<span class="w"> </span>thehive
+</code></pre></div>
+</li>
+<li>
+<p>Prepare the system</p>
+<p>It is recommended to use a dedicated, non-privileged user account to start TheHive. If so, make sure that the chosen account can create log files in <code>/opt/thehive/logs</code>.</p>
+<p>If you'd rather start the application as a service, use the following commands:</p>
+<div class="highlight"><pre><span></span><code>addgroup<span class="w"> </span>thehive
+adduser<span class="w"> </span>--system<span class="w"> </span>thehive
+chown<span class="w"> </span>-R<span class="w"> </span>thehive:thehive<span class="w"> </span>/opt/thehive
+mkdir<span class="w"> </span>/etc/thehive
+touch<span class="w"> </span>/etc/thehive/application.conf
+chown<span class="w"> </span>root:thehive<span class="w"> </span>/etc/thehive
+chgrp<span class="w"> </span>thehive<span class="w"> </span>/etc/thehive/application.conf
+chmod<span class="w"> </span><span class="m">640</span><span class="w"> </span>/etc/thehive/application.conf
+</code></pre></div>
+<p>Copy the systemd script in <code>/etc/systemd/system/thehive.service</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/tmp
+wget<span class="w"> </span>https://github.com/TheHive-Project/TheHive/blob/master/package/thehive.service
+cp<span class="w"> </span>thehive.service<span class="w"> </span>/etc/systemd/system/thehive.service
+</code></pre></div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We recommend using or playing with Beta version <strong>for testing purpose only</strong>.</p>
+</div>
+<h3 id="configuration_1">Configuration<a class="headerlink" href="#configuration_1" title="Permanent link">#</a></h3>
+<p>Following configurations are required to start TheHive successfully:</p>
+<ul>
+<li>Secret key configuration</li>
+<li>Database configuration</li>
+<li>File storage configuration</li>
+</ul>
+<h4 id="secret-key-configuration">Secret key configuration<a class="headerlink" href="#secret-key-configuration" title="Permanent link">#</a></h4>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Debian</label><label for="__tabbed_9_2">RPM</label><label for="__tabbed_9_3">Other</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The secret key is automatically generated and stored in <code>/etc/thehive/secret.conf</code> by package installation script.</p>
+</div>
+<div class="tabbed-block">
+<p>The secret key is automatically generated and stored in <code>/etc/thehive/secret.conf</code> by package installation script.</p>
+</div>
+<div class="tabbed-block">
+<p>Setup a secret key in the <code>/etc/thehive/secret.conf</code> file by running the following command:</p>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>&gt;<span class="w"> </span>/etc/thehive/secret.conf<span class="w"> </span><span class="s">&lt;&lt; _EOF_</span>
+<span class="s">play.http.secret.key=&quot;$(cat /dev/urandom | tr -dc &#39;a-zA-Z0-9&#39; | fold -w 64 | head -n 1)&quot;</span>
+<span class="s">_EOF_</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h4 id="database">Database<a class="headerlink" href="#database" title="Permanent link">#</a></h4>
+<p>To use Cassandra database, TheHive configuration file (<code>/etc/thehive/application.conf</code>) has to be edited and updated with following lines:</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">db {</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">janusgraph</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">janusgraph {</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">storage {</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">backend</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cql</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">hostname</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># seed node ip addresses</span>
+<span class="w">      </span><span class="c1">#username: &quot;&lt;cassandra_username&gt;&quot;       # login to connect to database (if configured in Cassandra)</span>
+<span class="w">      </span><span class="c1">#password: &quot;&lt;cassandra_passowrd&quot;</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">cql {</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">cluster-name</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">thp</span><span class="w">       </span><span class="c1"># cluster name</span>
+<span class="w">        </span><span class="nt">keyspace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">thehive</span><span class="w">           </span><span class="c1"># name of the keyspace</span>
+<span class="w">        </span><span class="nt">local-datacenter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datacenter1</span><span class="w">   </span><span class="c1"># name of the datacenter where TheHive runs (relevant only on multi datacenter setup)</span>
+<span class="w">        </span><span class="c1"># replication-factor: 2 # number of replica</span>
+<span class="w">        </span><span class="nt">read-consistency-level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ONE</span>
+<span class="w">        </span><span class="nt">write-consistency-level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ONE</span>
+<span class="w">      </span><span class="err">}</span>
+<span class="w w-Error">    </span><span class="err">}</span>
+<span class="w">  </span><span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div>
+<h4 id="indexes">Indexes<a class="headerlink" href="#indexes" title="Permanent link">#</a></h4>
+<p>Update <code>db.storage</code> configuration part in <code>/etc/thehive/application.conf</code> accordingly to your setup. </p>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Lucene</label><label for="__tabbed_10_2">Elasticsearch</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>If your setup is a standalone server or you are using a common NFS share, configure TheHive like this:  </p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">db {</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">janusgraph</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">janusgraph {</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">storage {</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">[..]</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">}</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">## Index configuration</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">index.search {</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">backend</span><span class="w"> </span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lucene</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">directory</span><span class="p p-Indicator">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">/opt/thp/thehive/index</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">}</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
+<span class="err">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>If you decided to have access to a centralised index with Elasticsearch, configure TheHive like this:  </p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">db {</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">janusgraph</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">janusgraph {</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">storage {</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">[..]</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">}</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">## Index configuration</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">index.search {</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">backend</span><span class="w"> </span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">elasticsearch</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">hostname</span><span class="w"> </span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;10.1.2.20&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">index-name </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">thehive</span>
+<span class="w w-Error">    </span><span class="err">}</span>
+<span class="w">  </span><span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h4 id="filesystem">Filesystem<a class="headerlink" href="#filesystem" title="Permanent link">#</a></h4>
+<div class="admonition example">
+<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><input id="__tabbed_11_3" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Local filesystem</label><label for="__tabbed_11_2">S3</label><label for="__tabbed_11_3">HDFS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>If you chose to store files on the local filesystem:</p>
+<ol>
+<li>
+<p>Ensure permission of the folder</p>
+<div class="highlight"><pre><span></span><code>chown<span class="w"> </span>-R<span class="w"> </span>thehive:thehive<span class="w"> </span>/opt/thp/thehive/files
+</code></pre></div>
+</li>
+<li>
+<p>add following lines to TheHive configuration file (<code>/etc/thehive/application.conf</code>)</p>
+<div class="highlight"><pre><span></span><code>## Storage configuration
+storage {
+provider = localfs
+localfs.location = /opt/thp/thehive/files
+}
+</code></pre></div>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>If you chose MinIO and a S3 object storage system to store files in a  filesystem, add following lines to TheHive configuration file (<code>/etc/thehive/application.conf</code>)</p>
+<div class="highlight"><pre><span></span><code><span class="c1">## Storage configuration</span>
+<span class="l l-Scalar l-Scalar-Plain">storage {</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s3</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">s3 {</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">bucket = &quot;thehive&quot;</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">readTimeout = 1 minute</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">writeTimeout = 1 minute</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">chunkSize = 1 MB</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">endpoint = &quot;http://&lt;IP_ADDRESS&gt;:9100&quot;</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">accessKey = &quot;&lt;MINIO ACCESS KEY&gt;&quot;</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">secretKey = &quot;&lt;MINIO SECRET KEY&gt;&quot;</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
+<span class="err">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>If you chose Apache Hadoop and a HDFS filesystem to store files in a distrubuted filesystem, add following lines to TheHive configuration file (<code>/etc/thehive/application.conf</code>)</p>
+<div class="highlight"><pre><span></span><code><span class="c1">## Storage configuration</span>
+<span class="l l-Scalar l-Scalar-Plain">storage {</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hdfs</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">hdfs {</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">root</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;hdfs://thehive1:10000&quot;</span><span class="w"> </span><span class="c1"># namenode server</span>
+<span class="w">    </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/thehive&quot;</span>
+<span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">thehive</span>
+<span class="w w-Error">  </span><span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="run">Run<a class="headerlink" href="#run" title="Permanent link">#</a></h3>
+<p>Save configuration file and run the service:</p>
+<div class="highlight"><pre><span></span><code>service<span class="w"> </span>thehive<span class="w"> </span>start
+</code></pre></div>
+<p>Please note that the service may take some time to start. Once it is started, you may launch your browser and connect to <code>http://YOUR_SERVER_ADDRESS:9000/</code>.</p>
+<p>The default admin user is <code>admin@thehive.local</code> with password <code>secret</code>. It is recommended to change the default password.</p>
+<h2 id="advanced-configuration">Advanced configuration<a class="headerlink" href="#advanced-configuration" title="Permanent link">#</a></h2>
+<p>For additional configuration options, please refer to the <a href="../../#configuration-guides">Configuration Guides</a>.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2025 19:33:37</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.strangebee.com" target="_blank" rel="noopener" title="www.strangebee.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://blog.strangebee.com" target="_blank" rel="noopener" title="blog.strangebee.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m61.7 169.4 101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://chat.thehive-project.org" target="_blank" rel="noopener" title="chat.thehive-project.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>

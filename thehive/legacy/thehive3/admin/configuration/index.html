@@ -1,0 +1,5259 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/configuration/">
+      
+      
+        <link rel="prev" href="../cluster/">
+      
+      
+        <link rel="next" href="../default-configuration/">
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Configuration Guide - TheHive Project Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+             
+This documentation site is deprecated. Please visit <a href=https://docs.strangebee.com><b>https://docs.strangebee.com</b></a> for <a href=https://docs.strangebee.com/thehive/setup/><b>TheHive 5</b></a> and <a href=https://docs.strangebee.com/cortex><b>Cortex</b></a> documentation ! 
+ 
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="TheHive Project Documentation" class="md-header__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
+      
+  <img src="../../../../../images/thehive.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TheHive Project Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  TheHive 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://docs.strangebee.com/thehive/setup/" class="md-tabs__link">
+        
+  
+    
+  
+  TheHive 5
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="TheHive Project Documentation" class="md-nav__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
+      
+  <img src="../../../../../images/thehive.png" alt="logo">
+
+    </a>
+    TheHive Project Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    TheHive 4
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            TheHive 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../installation-and-configuration/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation and configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/installation/step-by-step-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Step by step guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/installation/build-sources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build sources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/secret/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secret key
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/ssl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/proxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database & indexes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/file-storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/akka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/connectors-cortex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cortex connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/connectors-misp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MISP connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/manage-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/architecture/3_nodes_cluster/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use TheHive as a cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../user-guides/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    User guides
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            User guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/quick-start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick start with TheHive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Administrators
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Administrators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administrators/analyzer-templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage analyzer template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administrators/custom-fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage custom fields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administrators/observable-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage observable types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administrators/organisations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organisations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administrators/plateform-status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plateform status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administrators/profiles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Profiles management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administrators/tactics-techniques-procedures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tactics, Techniques & Procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administrators/tags-and-taxonomies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taxonomies and Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Organisation managers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Organisation managers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/organisation-managers/case-templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/organisation-managers/custom-tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/organisation-managers/organisations-users-sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organisations, Users and sharing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/organisation-managers/ui-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/organisation-managers/users-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Users management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analysts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Analysts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/create-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/create-case/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/create-tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Case Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/create-observables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Case Observables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/ttps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tactics, Techniques and Procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/run-responders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run Responders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/run-analyzers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run Analyzers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing Cases, Tasks and Observables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/close-case/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Close Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/export-case/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Cases to MISP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/analysts/user-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User settings configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Operations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Howto update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migration from TheHive 3.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/backup-restore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backup & restore
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/https/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure HTTPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/fail2ban/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use fail2ban
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/cassandra-security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cassandra & security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../api/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    APIs
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            APIs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../api/organisation/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Organisation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Organisation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/organisation/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/organisation/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/organisation/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List/Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/organisation/list-links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../api/user/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    User
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            User
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/user/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/user/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/user/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/user/set-password/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set password
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/user/generate-api-key/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate API key
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/user/revoke-api-key/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revoke API key
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/user/get-api-key/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get API key
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/user/lock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lock / Unlock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/user/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../api/custom-field/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Custom field
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_4" id="__nav_2_5_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Custom field
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/custom-field/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/custom-field/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/custom-field/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/custom-field/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/custom-field/get/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/custom-field/getUse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use count
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../api/case-template/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Case template
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_5" id="__nav_2_5_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Case template
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case-template/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get / List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case-template/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case-template/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case-template/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../api/alert/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Alert
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_6" id="__nav_2_5_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Alert
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List / Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/read/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mark as Read/Unread
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/promote-as-case/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Promote
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/merge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/similar-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List similar Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/list-observables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List Observables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/add-observable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add observables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/update-observable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update observable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/delete-observable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add observables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/run-responder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run Responder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/alert/list-responder-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List responder actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../api/case/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Case
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_7" id="__nav_2_5_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            Case
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case/merge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case/export/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Case to MISP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case/related-cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List related Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case/related-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List related Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case/attachments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List related Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case/run-responder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run responder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/case/responder-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List responder actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../api/task/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Task
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_8" id="__nav_2_5_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            Task
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/get/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get case task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List case tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/run-responder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run responder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/responder-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List responder jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/create-log/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add log
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/delete-log/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete log
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/log-run-responder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run responder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/log-responder-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List responder jobs on log
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List task logs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/task/waiting-tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List waiting tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../api/observable/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Observable
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_9" id="__nav_2_5_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            Observable
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/observable/create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/observable/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/observable/delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delete
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/observable/list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List / Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/observable/analyzer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analyzer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/observable/responder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Responder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.strangebee.com/thehive/setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TheHive 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-datastore" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Datastore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ldapad" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. LDAP/AD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-oauth2openid-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. OAuth2/OpenID Connect
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. OAuth2/OpenID Connect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321-roles-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1. Roles mappings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-user-autocreation-autoupdate-and-autologin" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2. User autocreation, autoupdate and autologin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3. Debugging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-streaming-aka-the-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Streaming (a.k.a The Flow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-entity-size-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Entity size limit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cortex" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Cortex
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-misp" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. MISP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. MISP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-notes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#71-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-associate-a-case-template-to-alerts-corresponding-to-misp-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Associate a Case Template to Alerts corresponding to MISP events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-event-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Event Filters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-misp-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 MISP Purpose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-http-client-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. HTTP Client Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. HTTP Client Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciphers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciphers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-monitoring-and-performance-metrics-deprecated" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Monitoring and Performance Metrics (deprecated)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. HTTPS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. HTTPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-https-using-a-reverse-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 HTTPS using a reverse proxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-https-without-reverse-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 HTTPS without reverse proxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-strengthen-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 Strengthen security
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="configuration-guide">Configuration Guide<a class="headerlink" href="#configuration-guide" title="Permanent link">#</a></h1>
+<p>The configuration file of TheHive is <code>/etc/thehive/application.conf</code> by default. This file uses the <a href="https://github.com/typesafehub/config/blob/master/HOCON.md">HOCON format</a>. All configuration parameters should go in this file.</p>
+<p>You can have a look at the <a href="../default-configuration/">default settings</a>.</p>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="#1-database">1. Database</a></li>
+<li><a href="#2-datastore">2. Datastore</a></li>
+<li><a href="#3-authentication">3. Authentication</a><ul>
+<li><a href="#31-ldapad">3.1 LDAP/AD</a></li>
+<li><a href="#32-oauth2openid-connect">3.2 OAuth2/OpenID Connect</a></li>
+</ul>
+</li>
+<li><a href="#4-streaming-aka-the-flow">4. Streaming (a.k.a The Flow)</a></li>
+<li><a href="#5-entity-size-limit">5. Entity size limit</a></li>
+<li><a href="#6-cortex">6. Cortex</a></li>
+<li><a href="#7-misp">7. MISP</a><ul>
+<li><a href="#71-configuration">7.1 Configuration</a></li>
+<li><a href="#72-associate-a-case-template-to-alerts-corresponding-to-misp-events">7.2 Associate a Case Template to Alerts corresponding to MISP events</a></li>
+<li><a href="#73-event-filters">7.3 Event Filters</a></li>
+</ul>
+</li>
+<li><a href="#74-misp-purpose">7.4 MISP Purpose</a></li>
+<li><a href="#8-http-client-configuration">8. HTTP Client Configuration</a></li>
+<li><a href="#9-monitoring-and-performance-metrics-deprecated">9. Monitoring and Performance Metrics (deprecated)</a></li>
+<li><a href="#10-https">10. HTTPS</a><ul>
+<li><a href="#101-https-using-a-reverse-proxy">10.1 HTTPS using a reverse proxy</a></li>
+<li><a href="#102-https-without-reverse-proxy">10.2 HTTPS without reverse proxy</a></li>
+<li><a href="#103-strengthen-security">10.3 Strengthen security</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-database">1. Database<a class="headerlink" href="#1-database" title="Permanent link">#</a></h2>
+<p>TheHive uses the Elasticsearch search engine to store all persistent data. Elasticsearch is not part of TheHive package. It must be installed and configured as a standalone instance which can be located on the same machine. For more information on how to set up Elasticsearch, please refer to <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/setup.html">Elasticsearch installation guide</a>.</p>
+<p>Three settings are required to connect to Elasticsearch:
+ * the base name of the index
+ * the name of the cluster
+ * the address(es) and port(s) of the Elasticsearch instance</p>
+<p>The Defaults settings are:</p>
+<div class="highlight"><pre><span></span><code># Elasticsearch
+search {
+  ## Basic configuration
+  # Index name.
+  index = the_hive
+  # ElasticSearch instance address.
+  uri = &quot;http://127.0.0.1:9200/&quot;
+
+  # Scroll keepalive
+  keepalive = 1m
+  # Size of the page for scroll
+  pagesize = 50
+  # Number of shards
+  nbshards = 5
+  # Number of replicas
+  nbreplicas = 1
+  # Arbitrary settings
+  settings {
+    # Maximum number of nested fields
+    mapping.nested_fields.limit = 100
+  }
+
+  ## Authentication configuration
+  #search.username = &quot;&quot;
+  #search.password = &quot;&quot;
+
+  ## SSL configuration
+  #search.keyStore {
+  #  path = &quot;/path/to/keystore&quot;
+  #  type = &quot;JKS&quot; # or PKCS12
+  #  password = &quot;keystore-password&quot;
+  #}
+  #search.trustStore {
+  #  path = &quot;/path/to/trustStore&quot;
+  #  type = &quot;JKS&quot; # or PKCS12
+  #  password = &quot;trustStore-password&quot;
+  #}
+ }
+</code></pre></div>
+<p>If you use a different configuration, modify the parameters accordingly in the <code>application.conf</code> file.</p>
+<p>If multiple Elasticsearch nodes are used as a cluster, you should add addresses of the master nodes in the url like this:</p>
+<div class="highlight"><pre><span></span><code>search {
+    uri = http://node1:9200,node2:9200/
+   ...
+</code></pre></div>
+<p>TheHive uses the http port of Elasticsearch (9200/tcp by default).</p>
+<p>TheHive versions index schema (mapping) in Elasticsearch. Version numbers are appended to the index base name (the 8th version of the schema uses the index <code>the_hive_8</code> if <code>search.index = the_hive</code>).</p>
+<p>When too many documents are requested to TheHive, it uses the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/search-request-scroll.html">scroll</a> feature: the results are retrieved through pagination. You can specify the size of the page (<code>search.pagesize</code>) and how long pages are kept in Elasticsearch ((<code>search.keepalive</code>) before purging.</p>
+<h2 id="2-datastore">2. Datastore<a class="headerlink" href="#2-datastore" title="Permanent link">#</a></h2>
+<p>TheHive stores attachments as Elasticsearch documents. They are split in chunks and each chunk sent to Elasticsearch is identified by the hash of the entire attachment and the associated chunk number.</p>
+<p>The chunk size (<code>datastore.chunksize</code>) can be changed but any change will only affect new attachments. Existing ones won't be changed.</p>
+<p>An attachment is identified by its hash. The algorithm used is configurable (<code>datastore.hash.main</code>) but must not be changed after the first attachment insertion. Otherwise, previous files cannot be retrieved.</p>
+<p>Extra hash algorithms can be configured using <code>datastore.hash.extra</code>. These hashes are not used to identify the attachment but are shown in the user interface (the hash associated to the main algorithm is also shown). If you change extra algorithms, you should inform TheHive and ask it to recompute all hashes. Please note that the associated API call is currently disabled in Buckfast (v 2.10). It will be reinstated in the next release.</p>
+<p>Observables can contain malicious data. When you try to download an attachment from an observable (typically a file), it is automatically zipped and the resulting ZIP file is password-protected. The default password is <strong>malware</strong> but it can be changed with the <code>datastore.attachment.password</code> setting.</p>
+<p>Default values are:</p>
+<div class="highlight"><pre><span></span><code># Datastore
+datastore {
+  name = data
+  # Size of stored data chunks
+  chunksize = 50k
+  hash {
+    # Main hash algorithm /!\ Don&#39;t change this value
+    main = &quot;SHA-256&quot;
+    # Additional hash algorithms (used in attachments)
+    extra = [&quot;SHA-1&quot;, &quot;MD5&quot;]
+  }
+  attachment.password = &quot;malware&quot;
+}
+</code></pre></div>
+<h2 id="3-authentication">3. Authentication<a class="headerlink" href="#3-authentication" title="Permanent link">#</a></h2>
+<p>TheHive supports local, LDAP, Active Directory (AD) or OAuth2/OpenID Connect for authentication. By default, it relies on local credentials stored in Elasticsearch.</p>
+<p>Authentication methods are stored in the <code>auth.provider</code> parameter, which is multi-valued. When a user logs in, each authentication method is tried in order until one succeeds. If no authentication method works, an error is returned and the user cannot log in.</p>
+<p>The default values within the configuration file are:
+<div class="highlight"><pre><span></span><code>auth {
+  # &quot;provider&quot; parameter contains authentication provider. It can be multi-valued (useful for migration)
+  # available auth types are:
+  # services.LocalAuthSrv : passwords are stored in user entity (in Elasticsearch). No configuration is required.
+  # ad : use ActiveDirectory to authenticate users. Configuration is under &quot;auth.ad&quot; key
+  # ldap : use LDAP to authenticate users. Configuration is under &quot;auth.ldap&quot; key
+  # oauth2 : use OAuth/OIDC to authenticate users. Configuration is under &quot;auth.oauth2&quot; and &quot;auth.sso&quot; keys
+  provider = [local]
+
+  # By default, basic authentication is disabled. You can enable it by setting &quot;method.basic&quot; to true.
+  #method.basic = true
+
+  ad {
+    # The Windows domain name in DNS format. This parameter is required if you do not use
+    # &#39;serverNames&#39; below.
+    #domainFQDN = &quot;mydomain.local&quot;
+
+    # Optionally you can specify the host names of the domain controllers instead of using &#39;domainFQDN
+    # above. If this parameter is not set, TheHive uses &#39;domainFQDN&#39;.
+    #serverNames = [ad1.mydomain.local, ad2.mydomain.local]
+
+    # The Windows domain name using short format. This parameter is required.
+    #domainName = &quot;MYDOMAIN&quot;
+
+    # If &#39;true&#39;, use SSL to connect to the domain controller.
+    #useSSL = true
+  }
+
+  ldap {
+    # The LDAP server name or address. The port can be specified using the &#39;host:port&#39;
+    # syntax. This parameter is required if you don&#39;t use &#39;serverNames&#39; below.
+    #serverName = &quot;ldap.mydomain.local:389&quot;
+
+    # If you have multiple LDAP servers, use the multi-valued setting &#39;serverNames&#39; instead.
+    #serverNames = [ldap1.mydomain.local, ldap2.mydomain.local]
+
+    # Account to use to bind to the LDAP server. This parameter is required.
+    #bindDN = &quot;cn=thehive,ou=services,dc=mydomain,dc=local&quot;
+
+    # Password of the binding account. This parameter is required.
+    #bindPW = &quot;***secret*password***&quot;
+
+    # Base DN to search users. This parameter is required.
+    #baseDN = &quot;ou=users,dc=mydomain,dc=local&quot;
+
+    # Filter to search user in the directory server. Please note that {0} is replaced
+    # by the actual user name. This parameter is required.
+    #filter = &quot;(cn={0})&quot;
+
+    # If &#39;true&#39;, use SSL to connect to the LDAP directory server.
+    #useSSL = true
+  }
+
+  oauth2 {
+    # URL of the authorization server
+    #clientId = &quot;client-id&quot;
+    #clientSecret = &quot;client-secret&quot;
+    #redirectUri = &quot;https://my-thehive-instance.example/api/ssoLogin&quot;
+    #responseType = &quot;code&quot;
+    #grantType = &quot;authorization_code&quot;
+
+    # URL from where to get the access token
+    #authorizationUrl = &quot;https://auth-site.com/OAuth/Authorize&quot;
+    #tokenUrl = &quot;https://auth-site.com/OAuth/Token&quot;
+
+    # The endpoint from which to obtain user details using the OAuth token, after successful login
+    #userUrl = &quot;https://auth-site.com/api/User&quot;
+    #scope = [&quot;openid profile&quot;]
+  }
+
+  # Single-Sign On
+  sso {
+    # Autocreate user in database?
+    #autocreate = false
+
+    # Autoupdate its profile and roles?
+    #autoupdate = false
+
+    # Autologin user using SSO?
+    #autologin = false
+    # Attributes mappings
+    #attributes {
+    #  login = &quot;sub&quot;
+    #  name = &quot;name&quot;
+    #  groups = &quot;groups&quot;
+    #  #roles = &quot;roles&quot;
+    #}
+
+    # Name of mapping class from user resource to backend user (&#39;simple&#39; or &#39;group&#39;)
+    #mapper = group
+    # Default roles for users with no groups mapped (&quot;read&quot;, &quot;write&quot;, &quot;admin&quot;)
+    #defaultRoles = []
+
+    #groups {
+    #  # URL to retrieve groups (leave empty if you are using OIDC)
+    #  #url = &quot;https://auth-site.com/api/Groups&quot;
+    #  # Group mappings, you can have multiple roles for each group: they are merged
+    #  mappings {
+    #    admin-profile-name = [&quot;admin&quot;]
+    #    editor-profile-name = [&quot;write&quot;]
+    #    reader-profile-name = [&quot;read&quot;]
+    #  }
+    #}
+  }
+}
+
+# Maximum time between two requests without requesting authentication
+session {
+  warning = 5m
+  inactivity = 1h
+}
+</code></pre></div></p>
+<h3 id="31-ldapad">3.1. LDAP/AD<a class="headerlink" href="#31-ldapad" title="Permanent link">#</a></h3>
+<p>To enable authentication using AD or LDAP, edit the <code>application.conf</code> file and supply the values for your environment. Then you need to create an account on TheHive for each AD or LDAP user in <code>Administration &gt; Users</code> page (which can only be accessed by an administrator). This is required as TheHive needs to look up the role associated with the user and that role is stored locally by TheHive. Obviously, you don't need to supply a password as TheHive will check the credentials against the remote directory.</p>
+<p>In order to use SSL on LDAP or AD, TheHive must be able to validate remote certificates. To that end, the Java truststore must contain certificate authorities used to generate the AD and/or LDAP certificates. The Default JVM truststore contains the main official authorities but LDAP and AD certificates are probably not issued by them.</p>
+<p>Use <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html">keytool</a> to create the truststore:
+<div class="highlight"><pre><span></span><code>keytool -import -file /path/to/your/ca.cert -alias InternalCA -keystore /path/to/your/truststore.jks
+</code></pre></div></p>
+<p>Then add <code>-Djavax.net.ssl.trustStore=/path/to/your/truststore.jks</code> parameter when you start TheHive or put it in the <code>JAVA_OPTS</code> environment variable before starting TheHive.</p>
+<h3 id="32-oauth2openid-connect">3.2. OAuth2/OpenID Connect<a class="headerlink" href="#32-oauth2openid-connect" title="Permanent link">#</a></h3>
+<p>To enable authentication using OAuth2/OpenID Connect, edit the <code>application.conf</code> file and supply the values of <code>auth.oauth2</code> according to your environment. In addition, you need to supply:</p>
+<ul>
+<li><code>auth.sso.attributes.login</code>: name of the attribute containing the OAuth2 user's login in retreived user info (mandatory)</li>
+<li><code>auth.sso.attributes.name</code>: name of the attribute containing the OAuth2 user's name in retreived user info (mandatory)</li>
+<li><code>auth.sso.attributes.groups</code>: name of the attribute containing the OAuth2 user's groups (mandatory using groups mappings)</li>
+<li><code>auth.sso.attributes.roles</code>: name of the attribute containing the OAuth2 user's roles in retreived user info (mandatory using simple mapping)</li>
+</ul>
+<h5 id="important-notes">Important notes<a class="headerlink" href="#important-notes" title="Permanent link">#</a></h5>
+<p>Authenticate the user using an external OAuth2 authenticator server. The configuration is:</p>
+<ul>
+<li>clientId (string) client ID in the OAuth2 server.</li>
+<li>clientSecret (string) client secret in the OAuth2 server.</li>
+<li>redirectUri (string) the url of TheHive AOuth2 page (.../api/ssoLogin).</li>
+<li>responseType (string) type of the response. Currently only "code" is accepted.</li>
+<li>grantType (string) type of the grant. Currently only "authorization_code" is accepted.</li>
+<li>authorizationUrl (string) the url of the OAuth2 server.</li>
+<li>authorizationHeader (string) prefix of the authorization header to get user info: Bearer, token, ...</li>
+<li>tokenUrl (string) the token url of the OAuth2 server.</li>
+<li>userUrl (string) the url to get user information in OAuth2 server.</li>
+<li>scope (list of string) list of scope.</li>
+</ul>
+<h5 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h5>
+<div class="highlight"><pre><span></span><code>auth {
+
+  provider = [local, oauth2]
+
+  [..]
+
+  sso {
+    autocreate: false
+    autoupdate: false
+    mapper: &quot;simple&quot;
+    attributes {
+      login: &quot;login&quot;
+      name: &quot;name&quot;
+      roles: &quot;role&quot;
+    }
+    defaultRoles: [&quot;read&quot;, &quot;write&quot;]
+    defaultOrganization: &quot;demo&quot;
+  }  
+  oauth2 {
+    name: oauth2
+    clientId: &quot;Client_ID&quot;
+    clientSecret: &quot;Client_ID&quot;
+    redirectUri: &quot;http://localhost:9000/api/ssoLogin&quot;
+    responseType: code
+    grantType: &quot;authorization_code&quot;
+    authorizationUrl: &quot;https://github.com/login/oauth/authorize&quot;
+    authorizationHeader: &quot;token&quot;
+    tokenUrl: &quot;https://github.com/login/oauth/access_token&quot;
+    userUrl: &quot;https://api.github.com/user&quot;
+    scope: [&quot;user&quot;]
+  }
+
+  [..]  
+}
+</code></pre></div>
+<h4 id="321-roles-mappings">3.2.1. Roles mappings<a class="headerlink" href="#321-roles-mappings" title="Permanent link">#</a></h4>
+<p>You can choose a roles mapping with the <code>auth.sso.mapper</code> parameter. The available options are <code>simple</code> and <code>group</code>:</p>
+<ul>
+<li>Using simple mapping, we assume that the user info retrieved from <code>auth.oauth2.userUrl</code> contains the roles associated to the OAuth2 user. They can be: <code>read</code>, <code>write</code> or <code>admin</code>.</li>
+<li>Using groups mappings, we assume the retrieved user info contains groups that have to be associated to internal roles. In that case, you have to define mapppings in <code>auth.sso.groups.mappings</code>. If a user has multiple groups, mapped roles are merged. If you need to retreive groups from another endpoint that the one used for user info, you can provide it in <code>auth.sso.groups.url</code>.</li>
+</ul>
+<p>The retrieved groups can be a valid JSON array or a string listing them:
+<div class="highlight"><pre><span></span><code>{
+  &quot;sub&quot;:    &quot;userid1&quot;,
+  &quot;name&quot;:   &quot;User name 1&quot;,
+  &quot;groups&quot;: [&quot;admin-profile-name&quot;, &quot;reader-profile-name&quot;]
+}
+
+OR
+
+{
+  &quot;sub&quot;:    &quot;userid2&quot;,
+  &quot;name&quot;:   &quot;User name 2&quot;,
+  &quot;groups&quot;: &quot;[admin-profile-name, reader-profile-name, \&quot;another profile\&quot;, &#39;a last group&#39;]&quot;
+}
+
+OR
+
+{
+  &quot;sub&quot;:    &quot;userid3&quot;,
+  &quot;name&quot;:   &quot;User name 3&quot;,
+  &quot;groups&quot;: &quot;the-only-group-of-the-user&quot;
+}
+</code></pre></div></p>
+<p>Finally, you can setup default roles associated with user with no roles/groups retrieved, using the <code>auth.sso.defaultRoles</code> parameter.</p>
+<h4 id="322-user-autocreation-autoupdate-and-autologin">3.2.2. User autocreation, autoupdate and autologin<a class="headerlink" href="#322-user-autocreation-autoupdate-and-autologin" title="Permanent link">#</a></h4>
+<p>The main advantage of OAuth2/OpenID Connect authentication is you won't need to create an account on TheHive for each OAuth2 user if you set the config parameter <code>auth.sso.autocreate</code> to <code>true</code>. However, by default, OAuth2 users won't be updated on SSO login unless you set <code>auth.sso.autoupdate</code> to <code>true</code>. If you set this last parameter, roles and name will be fetched from retrieved user info and will be updated in local database on each login of the user.</p>
+<p>With <code>auth.sso.autologin</code> set to <code>true</code>, each user connecting to TheHive will automatically be redirected to <code>auth.oauth2.authorizationUrl</code>. The only way to authenticate in TheHive using a local user will be either:</p>
+<ul>
+<li>Connecting to TheHive using <code>https://my-hive-instance.com/index.html#!/login?code=BAD_CODE</code>. You will get an <code>Authentication Failure</code> but will then be able to authenticate.</li>
+<li>Connecting to TheHive using a real OAuth2 account, then disconnect. On disconnection, you won't be redirected to authorization URL.</li>
+</ul>
+<h4 id="323-debugging">3.2.3. Debugging<a class="headerlink" href="#323-debugging" title="Permanent link">#</a></h4>
+<p>To debug the OAuth2 feature, you can uncomment the following lines in <code>/etc/thehive/logback.xml</code>:
+<div class="highlight"><pre><span></span><code>&lt;!-- Uncomment the next lines to log debug information for OAuth/OIDC login --&gt;
+&lt;logger name=&quot;org.elastic4play.services.auth&quot; level=&quot;DEBUG&quot; /&gt;
+&lt;logger name=&quot;services.OAuth2Srv&quot; level=&quot;DEBUG&quot; /&gt;
+&lt;logger name=&quot;services.mappers&quot; level=&quot;DEBUG&quot; /&gt;
+</code></pre></div></p>
+<h2 id="4-streaming-aka-the-flow">4. Streaming (a.k.a The Flow)<a class="headerlink" href="#4-streaming-aka-the-flow" title="Permanent link">#</a></h2>
+<p>The user interface is automatically updated when data is changed in the back-end. To do this, the back-end sends events to all the connected front-ends. The mechanism used to notify the front-end is called long polling and its settings are:</p>
+<ul>
+<li><code>refresh</code> : when there is no notification, close the connection after this duration (the default is 1 minute).</li>
+<li><code>cache</code> : before polling a session must be created, in order to make sure no event is lost between two polls. If there is no poll during the <code>cache</code> setting, the session is destroyed (the default is 15 minutes).</li>
+<li><code>nextItemMaxWait</code>, <code>globalMaxWait</code> :  when an event occurs, it is not immediately sent to the front-ends. The back-end waits <code>nextItemMaxWait</code> and up to <code>globalMaxWait</code> in case another event can be included in the notification. This mechanism saves many HTTP requests.</li>
+</ul>
+<p>Default values are:
+<div class="highlight"><pre><span></span><code># Streaming
+stream.longpolling {
+  # Maximum time a stream request waits for new element
+  refresh = 1m
+  # Lifetime of the stream session without request
+  cache = 15m
+  nextItemMaxWait = 500ms
+  globalMaxWait = 1s
+}
+</code></pre></div></p>
+<h2 id="5-entity-size-limit">5. Entity size limit<a class="headerlink" href="#5-entity-size-limit" title="Permanent link">#</a></h2>
+<p>The Play framework used by TheHive sets the HTTP body size limit to 100KB by default for textual content (json, xml, text, form data) and 10MB for file uploads. This could be too small in most cases so you may want to change it with the following settings in the <code>application.conf</code> file:</p>
+<div class="highlight"><pre><span></span><code># Max textual content length
+play.http.parser.maxMemoryBuffer=1M
+# Max file size
+play.http.parser.maxDiskBuffer=1G
+</code></pre></div>
+<p><em>Note</em>: if you are using a NGINX reverse proxy in front of TheHive, be aware that it doesn't distinguish between text data and a file upload. So, you should also set the <code>client_max_body_size</code> parameter in your NGINX server configuration to the highest value among the two: file upload and text size defined in TheHive <code>application.conf</code> file.</p>
+<h2 id="6-cortex">6. Cortex<a class="headerlink" href="#6-cortex" title="Permanent link">#</a></h2>
+<p>TheHive can use one or several <a href="https://github.com/TheHive-Project/Cortex">Cortex</a> analysis engines to get additional information on observables. When configured, analyzers available in Cortex become usable on TheHive. First you must enable <code>CortexConnector</code>, choose an identifier then specify the URL for each Cortex server:
+<div class="highlight"><pre><span></span><code>## Enable the Cortex module
+play.modules.enabled += connectors.cortex.CortexConnector
+
+cortex {
+  &quot;CORTEX-SERVER-ID&quot; {
+    # URL of the Cortex server
+    url = &quot;http://CORTEX_SERVER:CORTEX_PORT&quot;
+    # Key of the Cortex user, mandatory for Cortex 2
+    key = &quot;API key&quot;
+  }
+  # HTTP client configuration, more details in section 8
+  # ws {
+  #   proxy {}
+  #   ssl {}
+  # }
+  # Check job update time interval
+  refreshDelay = 1 minute
+  # Maximum number of successive errors before give up
+  maxRetryOnError = 3
+  # Check remote Cortex status time interval
+  statusCheckInterval = 1 minute
+}
+</code></pre></div></p>
+<p>If you connect TheHive with Cortex 2, you must create a user in Cortex with the <code>read, analyze</code> roles, set an API key and add this key in the Cortex server definition in TheHive <code>application.conf</code>. For Cortex 1, authentication is not required, the key is not used.</p>
+<p>To create a user with the <code>read, analyze</code> role in Cortex 2, you must have at least one organization configured then you can connect to the Cortex 2 Web UI using a <code>orgAdmin</code> account for that organization to create the user and generate their API key. Please refer to the Cortex <a href="https://github.com/TheHive-Project/CortexDocs/blob/master/admin/quick-start.md#step-7-optional-create-an-account-for-thehive-integration">Quick Start Guide</a> for more information.</p>
+<p>Cortex analyzes observables and outputs reports in JSON format. TheHive shows the report as-is by default. In order to make reports more readable, we provide report templates which are in a separate package and must be installed manually:
+ - download the report template package from https://dl.bintray.com/thehive-project/binary/report-templates.zip
+ - log in TheHive using an administrator account
+ - go to <code>Admin</code> &gt; <code>Report templates</code> menu
+ - click on <code>Import templates</code> button and select the downloaded package</p>
+<p>HTTP client used by Cortex connector use global configuration (in <code>play.ws</code>) but can be overridden in Cortex section and in each Cortex server configuration. Refer to section 8 for more detail on how to configure HTTP client.</p>
+<h2 id="7-misp">7. MISP<a class="headerlink" href="#7-misp" title="Permanent link">#</a></h2>
+<p>TheHive has the ability to connect to one or several MISP instances in order to import and export events. Hence TheHive is able to:</p>
+<ul>
+<li>receive events as they are added or updated from multiple MISP instances. These events will appear within the <code>Alerts</code> pane.</li>
+<li>export cases as MISP events to one or several MISP instances. The exported cases will not be published automatically though as they need to be reviewed prior to publishing. We <strong>strongly</strong> advise you to review the categories and types of attributes at least, before publishing the corresponding MISP events.</li>
+</ul>
+<p><strong>Note</strong>: Please note that only and all the observables marked as IOCs will be used to create the MISP event. Any other observable will not be shared. This is not configurable.</p>
+<p>Within the configuration file, you can register your MISP server(s) under the <code>misp</code> configuration keyword. Each server shall be identified using an arbitrary name, its <code>url</code>, the corresponding authentication <code>key</code> and optional <code>tags</code> to add each observable created from a MISP event. Any registered server will be used to import events as alerts. It can also be used to export cases to as MISP events, if the account used by TheHive on the MISP instance has sufficient rights.</p>
+<p>This means that TheHive can import events from configured MISP servers <em><strong>and</strong></em> export cases to the same configured MISP servers. Having different configuration for sources and destination servers is expected in a future version.</p>
+<h5 id="important-notes_1">Important Notes<a class="headerlink" href="#important-notes_1" title="Permanent link">#</a></h5>
+<p><strong>TheHive requires MISP 2.4.73 or better</strong>. Make sure that your are using a compatible version of MISP before reporting problems. MISP 2.4.72 and below do not work correctly with TheHive.</p>
+<h3 id="71-configuration">7.1 Configuration<a class="headerlink" href="#71-configuration" title="Permanent link">#</a></h3>
+<p>To sync with a MISP server and retrieve events or export cases, edit the <code>application.conf</code> file and adjust the example shown below to your setup:</p>
+<div class="highlight"><pre><span></span><code>## Enable the MISP module (import and export)
+play.modules.enabled += connectors.misp.MispConnector
+
+misp {
+  &quot;MISP-SERVER-ID&quot; {
+    # URL of the MISP instance.
+    url = &quot;&lt;The_URL_of_the_MISP_Server_goes_here&gt;&quot;
+
+    # Authentication key.
+    key = &quot;&lt;the_auth_key_goes_here&gt;&quot;
+
+    # Name of the case template created in TheHive that shall be used to import
+    # MISP events as cases by default.
+    caseTemplate = &quot;&lt;Template_Name_goes_here&gt;&quot;
+
+    # Tags to add to each observable imported from an event available on
+    # this instance.
+    tags = [&quot;misp-server-id&quot;]
+
+    # Truststore to use to validate the X.509 certificate  of  the  MISP
+    # instance if the default truststore is not sufficient.
+    #ws.ssl.trustManager.stores = [
+    #{
+    #  type: &quot;JKS&quot;
+    #  path: &quot;/path/to/truststore.jks&quot;
+    #}
+    #]
+
+    # HTTP client configuration, more details in section 8
+    # ws {
+    #   proxy {}
+    #   ssl {}
+    # }
+
+    # filters:
+    max-attributes = 1000
+    max-size = 1 MiB
+    max-age = 7 days
+    exclusion {
+     organisation = [&quot;bad organisation&quot;, &quot;other orga&quot;]
+     tags = [&quot;tag1&quot;, &quot;tag2&quot;]
+    }
+    whitelist.tags = [&quot;whitelist-tag1&quot;, &quot;whitelist-tag2&quot;]
+
+    # MISP purpose defines if this instance can be used to import events (ImportOnly), export cases (ExportOnly) or both (ImportAndExport)
+    # Default is ImportAndExport
+    purpose = ImportAndExport
+  }
+
+  # Check remote TheHive status time interval
+  statusCheckInterval = 1 minute
+
+  # Interval between consecutive MISP event  imports  in  hours  (h)  or
+  # minutes (m).
+  interval = 1h
+}
+</code></pre></div>
+<p>The HTTP client used by the MISP connector uses a global configuration (in <code>play.ws</code>) but it can be overridden within the MISP section of the configuation file and/or in the configuration section of each MISP server (in <code>misp.MISP-SERVER-ID.ws</code>). Refer to section 8 for more details on how to configure the HTTP client.</p>
+<h3 id="72-associate-a-case-template-to-alerts-corresponding-to-misp-events">7.2 Associate a Case Template to Alerts corresponding to MISP events<a class="headerlink" href="#72-associate-a-case-template-to-alerts-corresponding-to-misp-events" title="Permanent link">#</a></h3>
+<p>As stated in the subsection above, TheHive is able to automatically import MISP events (they will appear as alerts within the <code>Alerts</code> pane) and create cases out of them. This operation leverages the template engine. Thus you'll need to create a case template prior to importing MISP events.</p>
+<p>First, create a case template. Let's call it <strong>MISP-EVENT</strong>.</p>
+<p><img alt="misp case template" src="../../images/thehive-misp-case-template.png" /></p>
+<p>Then update TheHive's configuration to add a 'caseTemplate' parameter as shown in the example below:</p>
+<div class="highlight"><pre><span></span><code>misp {
+  &quot;MISP-SERVER-ID&quot; {
+    # URL of the MISP server
+    url = &quot;&lt;The_URL_of_the_MISP_Server_goes_here&gt;&quot;
+    # authentication key
+    key = &quot;&lt;the_auth_key_goes_here&gt;&quot;
+    # tags that must be automatically added to the case corresponding to the imported event
+    tags = [&quot;misp&quot;]
+    # case template
+    caseTemplate = &quot;MISP-EVENT&quot;
+  }
+</code></pre></div>
+<p>Once the configuration file has been edited, restart TheHive. Every new import of a MISP event will generate a case using to the <em>MISP-EVENT</em> template by default. The template can be overridden though during the event import.</p>
+<p>MISP events will only be imported by TheHive if they have at least one attribute and were published.</p>
+<h3 id="73-event-filters">7.3 Event Filters<a class="headerlink" href="#73-event-filters" title="Permanent link">#</a></h3>
+<p>When you first connect TheHive to a MISP instance, you can be overwhelmed by the number of alerts that will be generated, particularly if the MISP instance contains a lot of events. Indeed, every event, even those that date back to the beginning of the Internet, will generate an alert. To avoid alert fatigue, and starting from TheHive 3.0.4 (Cerana 0.4), you can exclude MISP events using different filters:</p>
+<ul>
+<li>the maximum number of attributes (max-attributes)</li>
+<li>the maximum size of the event's JSON message (max-size)</li>
+<li>the maximum age of the last publication (max-age)</li>
+<li>the organisation is black-listed (exclusion.organisation)</li>
+<li>one of the tags is black-listed (exclusion.tags)</li>
+<li>doesn't contain one of the whitelist tag (whitelist.tags)</li>
+</ul>
+<p>Please note that MISP event filters can be adapted to the configuration associated to each MISP server TheHive is connected with. As regards the <code>max-age</code> filter, it applies to the publication date of MISP events and not to the creation date.</p>
+<p>In the example below, the following MISP events won't generate alerts in TheHive:</p>
+<ul>
+<li>events that have more than 1000 attributes</li>
+<li>events which JSON message size is greater than 1MB</li>
+<li>events that have been published more than one week from the current date</li>
+<li>events that have been created by <code>bad organisation</code> or <code>other orga</code></li>
+<li>events that contain <code>tag1</code> or <code>tag2</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>    # filters:
+    max-attributes = 1000
+    max-size = 1 MiB
+    max-age = 7 days
+    exclusion {
+     organisation = [&quot;bad organisation&quot;, &quot;other orga&quot;]
+     tags = [&quot;tag1&quot;, &quot;tag2&quot;]
+    }
+</code></pre></div>
+<p>Of course, you can omit some of the filters or all of them.</p>
+<h2 id="74-misp-purpose">7.4 MISP Purpose<a class="headerlink" href="#74-misp-purpose" title="Permanent link">#</a></h2>
+<p>TheHive can interact with MISP in two ways: import a MISP event to create a case in TheHive and export a TheHive case to create a MISP event. By default, any MISP instance that is added to TheHive's configuration will be used for importing events and exporting cases (<code>ImportAndExport</code>). If you want to use MISP in only one way, you can set its purpose in the configuration as <code>ImportOnly</code> or <code>ExportOnly</code>.</p>
+<p>Starting from TheHive 3.3, when exporting a case to a MISP instance, you can export all its tags to the freshly created MISP event. This behaviour is not enabled by default. If you want to enable it you must set the <code>exportCaseTags</code> variable to <code>true</code> as shown below:</p>
+<div class="highlight"><pre><span></span><code>misp {
+  &quot;local&quot; {
+    url = &quot;http://127.0.0.1&quot;
+    key = &quot;&lt;the_auth_key_goes_here&gt;&quot;
+    exportCaseTags = true
+    [...] # additional parameters go here
+  }
+}
+</code></pre></div>
+<h2 id="8-http-client-configuration">8. HTTP Client Configuration<a class="headerlink" href="#8-http-client-configuration" title="Permanent link">#</a></h2>
+<p>HTTP client can be configured by adding <code>ws</code> key in sections that needs to connect to remote HTTP service. The key can contain configuration items defined in <a href="https://www.playframework.com/documentation/2.6.x/ScalaWS#Configuring-WS">play WS configuration</a>:</p>
+<ul>
+<li><code>ws.followRedirects</code>: Configures the client to follow 301 and 302 redirects (default is true).</li>
+<li><code>ws.useragent</code>: To configure the User-Agent header field.</li>
+<li><code>ws.compressionEnabled</code>: Set it to true to use gzip/deflater encoding (default is false).</li>
+</ul>
+<h4 id="timeouts">Timeouts<a class="headerlink" href="#timeouts" title="Permanent link">#</a></h4>
+<p>There are 3 different timeouts in WS. Reaching a timeout causes the WS request to interrupt.
+ - <code>ws.timeout.connection</code>: The maximum time to wait when connecting to the remote host (default is 120 seconds).
+ - <code>ws.timeout.idle</code>: The maximum time the request can stay idle (connection is established but waiting for more data) (default is 120 seconds).
+ - <code>ws.timeout.request</code>: The total time you accept a request to take (it will be interrupted even if the remote host is still sending data) (default is 120 seconds).</p>
+<h4 id="proxy">Proxy<a class="headerlink" href="#proxy" title="Permanent link">#</a></h4>
+<p>Proxy can be used. By default, the proxy configured in JVM is used but one can configured specific configurations for each HTTP client.
+ - <code>ws.useProxyProperties</code>: To use the JVM system’s HTTP proxy settings (http.proxyHost, http.proxyPort) (default is true). This setting is ignored if <code>ws.proxy</code> settings is present.
+ - <code>ws.proxy.host</code>: The hostname of the proxy server.
+ - <code>ws.proxy.post</code>: The port of the proxy server.
+ - <code>ws.proxy.protocol</code>: The protocol of the proxy server.  Use "http" or "https".  Defaults to "http" if not specified.
+ - <code>ws.proxy.user</code>: The username of the credentials for the proxy server.
+ - <code>ws.proxy.password</code>: The password for the credentials for the proxy server.
+ - <code>ws.proxy.ntlmDomain</code>: The password for the credentials for the proxy server.
+ - <code>ws.proxy.encoding</code>: The realm's charset.
+ - <code>ws.proxy.nonProxyHosts</code>: The list of hosts on which proxy must not be used.</p>
+<h4 id="ssl">SSL<a class="headerlink" href="#ssl" title="Permanent link">#</a></h4>
+<p>SSL of HTTP client can be completely configured in <code>application.conf</code> file.</p>
+<h5 id="certificate-manager">Certificate manager<a class="headerlink" href="#certificate-manager" title="Permanent link">#</a></h5>
+<p>Certificate manager is used to store client certificates and certificate authorities.</p>
+<p><code>keyManager</code> indicates which certificate HTTP client can use to authenticate itself on remote host (when certificate based authentication is used)
+<div class="highlight"><pre><span></span><code>  ws.ssl.keyManager {
+    stores = [
+      {
+        type: &quot;pkcs12&quot; // JKS or PEM
+        path: &quot;mycert.p12&quot;
+        password: &quot;password1&quot;
+      }
+    ]
+  }
+</code></pre></div>
+Certificate authorities are configured using <code>trustManager</code> key. It is used to establish a secure connection with remote host. Server certificate must be signed by a trusted certificate authority.
+<div class="highlight"><pre><span></span><code>  ws.ssl.trustManager {
+    stores = [
+      {
+        type: &quot;JKS&quot; // JKS or PEM
+        path: &quot;keystore.jks&quot;
+        password: &quot;password1&quot;
+      }
+    ]
+  }
+</code></pre></div></p>
+<h5 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">#</a></h5>
+<p>To debug the key manager / trust manager, set the following flags:
+<div class="highlight"><pre><span></span><code>  ws.ssl.debug = {
+    ssl = true
+    trustmanager = true
+    keymanager = true
+    sslctx = true
+    handshake = true
+    verbose = true
+    data = true
+    certpath = true
+  }
+</code></pre></div></p>
+<h5 id="protocols">Protocols<a class="headerlink" href="#protocols" title="Permanent link">#</a></h5>
+<p>If you want to define a different default protocol, you can set it specifically in the client:
+<div class="highlight"><pre><span></span><code>ws.ssl.protocol = &quot;TLSv1.2&quot;
+</code></pre></div>
+If you want to define the list of enabled protocols, you can do so explicitly:
+<div class="highlight"><pre><span></span><code>ws.ssl.enabledProtocols = [&quot;TLSv1.2&quot;, &quot;TLSv1.1&quot;, &quot;TLSv1&quot;]
+</code></pre></div></p>
+<h5 id="ciphers">Ciphers<a class="headerlink" href="#ciphers" title="Permanent link">#</a></h5>
+<p>Cipher suites can be configured using <code>ws.ssl.enabledCipherSuites</code>:
+<div class="highlight"><pre><span></span><code>ws.ssl.enabledCipherSuites = [
+  &quot;TLS_DHE_RSA_WITH_AES_128_GCM_SHA256&quot;,
+  &quot;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&quot;,
+  &quot;TLS_DHE_RSA_WITH_AES_256_GCM_SHA384&quot;,
+  &quot;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&quot;,
+]
+</code></pre></div></p>
+<h2 id="9-monitoring-and-performance-metrics-deprecated">9. Monitoring and Performance Metrics (deprecated)<a class="headerlink" href="#9-monitoring-and-performance-metrics-deprecated" title="Permanent link">#</a></h2>
+<p>Performance metrics (response time, call rate to Elasticsearch and HTTP request, throughput, memory used...) can be collected if enabled in configuration.</p>
+<p>Enable it by editing the <code>application.conf</code> file, and add:</p>
+<div class="highlight"><pre><span></span><code># Register module for dependency injection
+play.modules.enabled += connectors.metrics.MetricsModule
+
+metrics.enabled = true
+</code></pre></div>
+<p>These metrics can optionally be sent to an external database (graphite, ganglia or influxdb) in order to monitor the health of the platform. This feature is disabled by default.</p>
+<div class="highlight"><pre><span></span><code>metrics {
+    name = default
+    enabled = true
+    rateUnit = SECONDS
+    durationUnit = SECONDS
+    showSamples = false
+    jvm = true
+    logback = true
+
+    graphite {
+        enabled = false
+        host = &quot;127.0.0.1&quot;
+        port = 2003
+        prefix = thehive
+        rateUnit = SECONDS
+        durationUnit = MILLISECONDS
+        period = 10s
+    }
+
+    ganglia {
+        enabled = false
+        host = &quot;127.0.0.1&quot;
+        port = 8649
+        mode = UNICAST
+        ttl = 1
+        version = 3.1
+        prefix = thehive
+        rateUnit = SECONDS
+        durationUnit = MILLISECONDS
+        tmax = 60
+        dmax = 0
+        period = 10s
+    }
+
+    influx {
+        enabled = false
+        url = &quot;http://127.0.0.1:8086&quot;
+        user = root
+        password = root
+        database = thehive
+        retention = default
+        consistency = ALL
+        #tags = {
+        #    tag1 = value1
+        #    tag2 = value2
+        #}
+        period = 10s
+    }
+}
+</code></pre></div>
+<h2 id="10-https">10. HTTPS<a class="headerlink" href="#10-https" title="Permanent link">#</a></h2>
+<p>You can enable HTTPS on TheHive application or add a reverse proxy in front of TheHive. The latter solution is recommended.</p>
+<h3 id="101-https-using-a-reverse-proxy">10.1 HTTPS using a reverse proxy<a class="headerlink" href="#101-https-using-a-reverse-proxy" title="Permanent link">#</a></h3>
+<p>You can choose any reverse proxy to add SSL on TheHive. Below an example of NGINX configuration:
+<div class="highlight"><pre><span></span><code>    server {
+            listen 443 ssl;
+            server_name thehive.example.com;
+
+            ssl_certificate         ssl/thehive_cert.pem;
+            ssl_certificate_key     ssl/thehive_key.pem;
+
+            proxy_connect_timeout   600;
+            proxy_send_timeout      600;
+            proxy_read_timeout      600;
+            send_timeout            600;
+            client_max_body_size    2G;
+            proxy_buffering off;
+            client_header_buffer_size 8k;
+
+            location / {
+                    add_header              Strict-Transport-Security &quot;max-age=31536000; includeSubDomains&quot;;
+                    proxy_pass              http://127.0.0.1:9000/;
+                    proxy_http_version      1.1;
+                    proxy_set_header Connection &quot;&quot;; # cf. https://github.com/akka/akka/issues/19542
+            }
+    }
+</code></pre></div></p>
+<h3 id="102-https-without-reverse-proxy">10.2 HTTPS without reverse proxy<a class="headerlink" href="#102-https-without-reverse-proxy" title="Permanent link">#</a></h3>
+<p>This is not supported.</p>
+<h3 id="103-strengthen-security">10.3 Strengthen security<a class="headerlink" href="#103-strengthen-security" title="Permanent link">#</a></h3>
+<p>When SSL is enable (with reverse proxy or not), you can configure cookie to be "secure" (usable only with HTTPS protocol). This is done by adding <code>play.http.session.secure=true</code> in the application.conf file.</p>
+<p>You can also enable <a href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>. This header must be configured on the SSL termination component.
+For NGINX, use <code>add_header</code> directive, as show above.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2025 19:33:37</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.strangebee.com" target="_blank" rel="noopener" title="www.strangebee.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://blog.strangebee.com" target="_blank" rel="noopener" title="blog.strangebee.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m61.7 169.4 101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://chat.thehive-project.org" target="_blank" rel="noopener" title="chat.thehive-project.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["header.autohide", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
